@@ -1,0 +1,346 @@
+@charset "utf-8";
+
+/* ============================================
+  LP
+// ==========================================*/
+
+.lp {
+
+/*--------------------
+	ヘッダー
+--------------------*/
+  .header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    padding: 45px;
+
+    &__logo {
+      img {
+        width: 103px;
+      }
+    }
+  }
+
+/*--------------------
+	メインビジュアル
+--------------------*/
+  .mainVisual {
+    position: relative;
+    &__bg-img {
+      height: 800px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+    &__wrap {
+      display: flex;
+      max-width: 1524px;
+      margin: 0 auto;
+      padding: 0 200px;
+      position: relative;
+    }
+    &__copy {
+      margin-top: 140px;
+      position: relative;
+      z-index: 2;
+      .copy {
+        font-size: 6rem;
+        font-weight: bold;
+        line-height: 1.5;
+      }
+      .fz-70 {
+        font-size: 7rem;
+        line-height: 1;
+      }
+    }
+    &__logo-img {
+      width: 57.5%;
+      max-width: 829px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .list {
+      margin-top: 16px;
+    }
+  }
+
+/*--------------------
+	COMING SOON
+--------------------*/
+  .sec__coming-soon {
+    margin-top: 200px;
+
+    .coming-soon {
+      &__text-holder {
+        text-align: center;
+
+        .bold {
+          font-weight: bold;
+        }
+        .thin {
+          font-size: 2rem;
+          font-weight: bold;
+          margin-top: 16px;
+        }
+        .eng {
+          font-size: 6.6rem;
+          letter-spacing: 0.075em;
+          line-height: 1;
+        }
+        .ja {
+          font-size: 4rem;
+          line-height: 1;
+          margin-top: 32px;
+        }
+
+      }
+      &__btn-holder {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 40px;
+      }
+    }
+    .commonBtn01 {
+      &.-pink {
+        margin-right: 24px;
+      }
+    }
+  }
+
+/*--------------------
+	採用管理
+--------------------*/
+  .sec__recruit-manage {
+    margin-top: 120px;
+    position: relative;
+    min-height: 790px;
+
+    .recruit-manage {
+      &__bg-img {
+        height: 790px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+      }
+      &__inner {
+        padding-top: 214px;
+      }
+      &__body {
+        padding-top: 208px;
+
+        .body {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-top: 48px;
+        }
+        .card {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          flex: 0 0 50%;
+          padding-right: 3%;
+
+          &__list {
+            margin-left: 40px;
+          }
+          &__term {
+            font-size: 2.4rem;
+            color: #eb7973;
+            font-weight: bold;
+            margin-top: 4px;
+          }
+        }
+        .postscript {
+          line-height: 1.6;
+          display: inline-block;
+          margin-top: 8px;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+/*--------------------
+	その他サービス
+--------------------*/
+  .sec__other-service {
+    margin-top: 160px;
+
+    .other-service {
+      &__head {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &__body {
+        margin-top: 88px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .card {
+          width: 30%;
+          margin-right: 5%;
+          &:nth-child(3n+3) {
+            margin-right: 0;
+          }
+        }
+        .term {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .description {
+          margin-top: 30px;
+        }
+      }
+    }
+    .annotation {
+      margin-top: 48px;
+      padding: 48px;
+      text-align: center;
+      background-color: #111;
+      &__text {
+        .term {
+          font-size: 1.6rem;
+          font-weight: bold;
+        }
+        .description {
+          font-size: 1.6rem;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+
+/*--------------------
+	会社概要
+--------------------*/
+  .sec__profile {
+    margin-top: 72px;
+    position: relative;
+
+    .profile {
+      &__bg-img {
+        height: 400px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      &__head {
+        padding-top: 148px;
+      }
+      &__body {
+        margin-top: 148px;
+        background-color: #111;
+        padding: 76px 88px 82px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        overflow: hidden;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 595px;
+          height: 776px;
+          background-image: url(../img/logo_bg_gray.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          position: absolute;
+          bottom: -120px;
+          right: 0;
+        }
+      }
+      &__box {
+        position: relative;
+        z-index: 2;
+        flex: 0 0 50%;
+      }
+      &__list {
+        color: #eee;
+        font-size: 1.6rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 12px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        .term {
+          background-color: #000;
+          padding: 10px 16px;
+          text-align: center;
+          flex: 0 0 24%;
+          margin-right: 4%;
+        }
+      }
+    }
+  }
+
+/*--------------------
+	フッター
+--------------------*/
+  .footer {
+
+    &__share {
+      display: flex;
+      align-items: center;
+      .hd {
+        font-size: 1.2rem;
+        margin-right: 20px;
+        color: $txt-color;
+        line-height: 1.58;
+      }
+      .list {
+        display: flex;
+        align-items: center;
+        &__item {
+        margin-left: 8px;
+        &:first-child {
+          margin-left: 0;
+        }
+
+        img {
+          @include mq(sp) {
+          height: 24px;
+          margin-bottom: 4px;
+          }
+        }
+        }
+      }
+    }
+  }
+
+/*--------------------
+	ページトップ
+--------------------*/
+  .pagetop {
+
+  }
+
+/*--------------------
+	固定コンバージョン
+--------------------*/
+  .fixed__conversion {
+
+  }
+
+}

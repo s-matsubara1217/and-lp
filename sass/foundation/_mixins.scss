@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+/* ============================================
+  VARIABLES
+// ==========================================*/
+
+/*------------------------------
+  color set
+------------------------------*/
+$primary-color: #000191;
+$secondary-color: #f7c327;
+$third-color: #fefbf0;
+$fourth-color: #f5f7f9;
+$txt-color: #fff;
+$border-color: #eee;
+$bg-color: #000;
+
+
+/*------------------------------
+  font-family
+------------------------------*/
+$default-family:"游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+$mincho: "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , 'Noto Serif JP' , serif;
+$gothic: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+$eng: 'Lato', sans-serif;
+$eng-mincho: 'Times New Roman', serif;
+$mincho-ie:  "ＭＳ Ｐ明朝" , "MS PMincho" , serif;
+$default-family-ie: "メイリオ", Meiryo, sans-serif;
+
+
+
+/* ============================================
+  MIXINS
+// ==========================================*/
+
+/*------------------------------
+  break-points
+------------------------------*/
+$breakpoints: (
+  'pc': 'screen and (min-width: 835px)',
+  'tab':'screen and (min-width:768px) and (max-width:1180px)',
+  'sp': 'screen and (max-width: 834px)',
+  'narrow': 'screen and (max-width: 320px)',
+  "ie": "all and (-ms-high-contrast: none)",
+) !default;
+
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+
+/*------------------------------
+  アスペクト比固定
+------------------------------*/
+@mixin keepAspect($persentage){
+	position: relative;
+	z-index: 1;
+	&:before{
+		content: '';
+		display: block;
+		padding-top: $persentage;
+	}
+	img{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}

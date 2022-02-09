@@ -1,0 +1,209 @@
+@charset "utf-8";
+
+/* ============================================
+	MODULES
+// ==========================================*/
+
+/*--------------------
+	commonTitle
+--------------------*/
+.commonTitle01{
+	position: relative;
+	&::before {
+		content: '';
+		display: inline-block;
+		width: 274px;
+		height: 357px;
+		background-image: url(../img/logo_transculent.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: -165px;
+		left: -80px;
+		z-index: -1;
+	}
+
+	.ja {
+		font-size: 5rem;
+		font-weight: bold;
+		line-height: 1;
+	}
+	.eng {
+		font-size: 2rem;
+		font-weight: 900;
+		display: inline-block;
+		margin-top: 8px;
+	}
+
+	&.-center {
+		text-align: center;
+		display: inline-block;
+	}
+	&.-small {
+		display: flex;
+		padding-left: 88px;
+		margin-left: 32px;
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 69px;
+			height: 91px;
+			background-image: url(../img/logo_small.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+
+		.ja {
+			font-size: 3.4rem;
+		}
+		.eng {
+			font-size: 1.4rem;
+			margin-left: 28px;
+		}
+	}
+}
+.commonTitle02 {
+	font-weight: bold;
+	border-bottom: 2px solid #fff;
+	display: inline-block;
+	line-height: 1;
+
+	&.-big {
+		font-size: 3.6rem;
+		padding-bottom: 8px;
+	}
+	&.-small {
+		font-size: 3rem;
+		padding-bottom: 4px;
+	}
+}
+
+
+/*--------------------
+	commonBtn
+--------------------*/
+.commonBtn01{
+	width: 320px;
+	height: 108px;
+	padding: 24px 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	@include mq(sp) {
+		max-width: 200px;
+	}
+
+	&.-pink {
+		background-color: #eb7973;
+		.txt {
+			display: inline-block;
+			font-size: 1.4rem;
+			font-weight: bold;
+			line-height: 1;
+		}
+		.num {
+			display: inline-block;
+			font-size: 2.6rem;
+			font-weight: bold;
+			line-height: 1;
+		}
+	}
+	&.-red {
+		background-color: #c01a20;
+		.txt {
+			font-size: 1.6rem;
+			font-weight: bold;
+		}
+	}
+}
+
+
+/*--------------------
+	list
+--------------------*/
+.list {
+	&-big {
+		font-size: 2.2rem;
+		font-weight: bold;
+		line-height: 1.8;
+	}
+	&-disc {
+		li {
+			position: relative;
+			padding-left: 16px;
+			&::before {
+				content: '';
+				display: inline-block;
+				width: 5px;
+				height: 5px;
+				background-color: #fff;
+				border-radius: 50%;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+			}
+ 		}
+	}
+	&-number {
+		li {
+			font-size: 1.6rem;
+			line-height: 1.6;
+			position: relative;
+			counter-increment: number;
+			padding-left: 22px;
+			margin-top: 8px;
+
+			&::before {
+				content: counter(number);
+				background-color: transparent;
+				border: 1px solid;
+				border-radius: 50%;
+				box-sizing: border-box;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 18px;
+				width: 18px;
+				line-height: 1;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				font-size: 1.4rem;
+				padding-left: 1px;
+			}
+			&:first-child {
+				margin-top: 10px;
+			}
+		}
+	}
+	&-small {
+		li {
+			font-weight: bold;
+			font-size: 1.6rem;
+			padding-left: 8px;
+			&::before {
+				width: 3px;
+				height: 3px;
+			}
+		}
+	}
+}
+
+
+/*--------------------
+	commonNum
+--------------------*/
+.commonNum {
+	font-size: 6rem;
+	font-weight: 900;
+	font-style: italic;
+	color: rgba(#fff,0.1);
+	line-height: 1;
+}
