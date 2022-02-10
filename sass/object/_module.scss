@@ -21,18 +21,29 @@
 		top: -165px;
 		left: -80px;
 		z-index: -1;
+		@include mq(sp) {
+			transform: scale(0.5);
+			left: -100px;
+		}
 	}
 
 	.ja {
 		font-size: 5rem;
 		font-weight: bold;
 		line-height: 1;
+		@include mq(sp) {
+			font-size: 2.8rem;
+		}
 	}
 	.eng {
 		font-size: 2rem;
 		font-weight: 900;
 		display: inline-block;
 		margin-top: 8px;
+		@include mq(sp) {
+			font-size: 1.5rem;
+			margin-top: 0;
+		}
 	}
 
 	&.-center {
@@ -55,14 +66,29 @@
 			top: 50%;
 			left: 0;
 			transform: translateY(-50%);
+			@include mq(sp) {
+				transform: translateY(-58%);
+			}
 		}
+		@include mq(sp) {
+            margin-left: 0;
+			display: block;
+			padding-left: 80px;
+        }
 
 		.ja {
 			font-size: 3.4rem;
+			@include mq(sp) {
+				font-size: 2.5rem;
+				margin-top: 12px;
+			}
 		}
 		.eng {
 			font-size: 1.4rem;
 			margin-left: 28px;
+			@include mq(sp) {
+				margin-left: 0px;
+			}
 		}
 	}
 }
@@ -71,14 +97,24 @@
 	border-bottom: 2px solid #fff;
 	display: inline-block;
 	line-height: 1;
+	@include mq(sp) {
+		border-bottom: 1px solid #fff;
+	}
 
 	&.-big {
 		font-size: 3.6rem;
 		padding-bottom: 8px;
+		@include mq(sp) {
+			font-size: 1.8rem;
+			padding-bottom: 6px;
+		}
 	}
 	&.-small {
 		font-size: 3rem;
 		padding-bottom: 4px;
+		@include mq(sp) {
+			font-size: 1.6rem;
+		}
 	}
 }
 
@@ -87,37 +123,110 @@
 	commonBtn
 --------------------*/
 .commonBtn01{
-	width: 320px;
-	height: 108px;
-	padding: 24px 48px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	@include mq(sp) {
-		max-width: 200px;
+	a {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		width: 320px;
+		height: 108px;
+		padding: 24px 48px;
+		transition: opacity 0.3s;
+		@include mq(pc) {
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+		@include mq(sp) {
+			width: 100%;
+			height: 72px;
+			padding: 0;
+		}
 	}
 
 	&.-pink {
-		background-color: #eb7973;
+		a {
+			background-color: #eb7973;
+		}
 		.txt {
 			display: inline-block;
 			font-size: 1.4rem;
 			font-weight: bold;
 			line-height: 1;
+			@include mq(sp) {
+				font-size: 1rem;
+				line-height: 1.2;
+			}
 		}
 		.num {
 			display: inline-block;
 			font-size: 2.6rem;
 			font-weight: bold;
 			line-height: 1;
+			margin-top: 6px;
+			position: relative;
+			padding-left: 28px;
+			@include mq(sp) {
+				font-size: 1.8rem;
+				padding-left: 0px;
+				margin-top: 2px;
+			}
+
+			&::before {
+				content: '';
+				display: inline-block;
+				width: 18px;
+				height: 18px;
+				background-image: url(../img/ico_tel.png);
+				background-size: contain;
+				background-repeat: no-repeat;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				@include mq(sp) {
+					content: none;
+				}
+			}
 		}
 	}
 	&.-red {
-		background-color: #c01a20;
+		a {
+			background-color: #c01a20;
+		}
 		.txt {
 			font-size: 1.6rem;
 			font-weight: bold;
+			position: relative;
+			padding-left: 24px;
+			@include mq(sp) {
+				padding-left: 0px;
+				font-size: 1.3rem;
+				line-height: 1.2;
+			}
+
+			&::before {
+				content: '';
+				display: inline-block;
+				width: 15px;
+				height: 12px;
+				background-image: url(../img/ico_mail.png);
+				background-size: contain;
+				background-repeat: no-repeat;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-56%);
+				@include mq(sp) {
+					content: none;
+				}
+			}
+		}
+	}
+	&.-short {
+		a {
+			height: 58px;
 		}
 	}
 }
@@ -131,11 +240,17 @@
 		font-size: 2.2rem;
 		font-weight: bold;
 		line-height: 1.8;
+		@include mq(sp) {
+			font-size: 1.6rem;
+		}
 	}
 	&-disc {
 		li {
 			position: relative;
 			padding-left: 16px;
+			@include mq(sp) {
+				padding-left: 12px;
+			}
 			&::before {
 				content: '';
 				display: inline-block;
@@ -147,6 +262,10 @@
 				top: 50%;
 				left: 0;
 				transform: translateY(-50%);
+				@include mq(sp) {
+					width: 4px;
+					height: 4px;
+				}
 			}
  		}
 	}
@@ -158,6 +277,10 @@
 			counter-increment: number;
 			padding-left: 22px;
 			margin-top: 8px;
+			@include mq(sp) {
+				font-size: 1.4rem;
+				margin-top: 4px;
+			}
 
 			&::before {
 				content: counter(number);
@@ -177,9 +300,15 @@
 				transform: translateY(-50%);
 				font-size: 1.4rem;
 				padding-left: 1px;
+				@include mq(sp) {
+					transform: translateY(-50%) scale(0.8);
+				}
 			}
 			&:first-child {
 				margin-top: 10px;
+				@include mq(sp) {
+					margin-top: 2px;
+				}
 			}
 		}
 	}
@@ -188,6 +317,10 @@
 			font-weight: bold;
 			font-size: 1.6rem;
 			padding-left: 8px;
+			@include mq(sp) {
+				font-size: 1.4rem;
+				line-height: 1.8;
+			}
 			&::before {
 				width: 3px;
 				height: 3px;
@@ -206,4 +339,7 @@
 	font-style: italic;
 	color: rgba(#fff,0.1);
 	line-height: 1;
+	@include mq(sp) {
+		font-size: 4rem;
+	}
 }
