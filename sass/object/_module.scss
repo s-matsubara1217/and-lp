@@ -292,10 +292,8 @@
 			}
 
 			&::before {
-				content: counter(number);
+				content: counter(number) ".";
 				background-color: transparent;
-				border: 1px solid;
-				border-radius: 50%;
 				box-sizing: border-box;
 				display: flex;
 				justify-content: center;
