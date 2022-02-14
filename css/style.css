@@ -230,6 +230,8 @@ main.main { position: relative; z-index: 2; }
 
 .mincho { font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "Noto Serif JP", serif; }
 
+.gothic-title { font-family: "a p-otf a1ゴシック std", sans-serif; }
+
 /* ============================================
 // loading
 // ==========================================*/
@@ -391,9 +393,13 @@ main.main { position: relative; z-index: 2; }
 
 @media screen and (max-width: 834px) { .commonBtn01.-pink .num { font-size: 1.8rem; padding-left: 0px; margin-top: 2px; } }
 
+@media all and (-ms-high-contrast: none) { .commonBtn01.-pink .num { font-size: 2.2rem; } }
+
 .commonBtn01.-pink .num::before { content: ''; display: inline-block; width: 18px; height: 18px; background-image: url(../img/ico_tel.png); background-size: contain; background-repeat: no-repeat; position: absolute; top: 50%; left: 0; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 
 @media screen and (max-width: 834px) { .commonBtn01.-pink .num::before { content: none; } }
+
+@media all and (-ms-high-contrast: none) { .commonBtn01.-pink .num::before { top: 32%; } }
 
 .commonBtn01.-red a { background-color: #c01a20; }
 
@@ -406,6 +412,8 @@ main.main { position: relative; z-index: 2; }
 @media screen and (max-width: 834px) { .commonBtn01.-red .txt::before { content: none; } }
 
 .commonBtn01.-short a { height: 58px; }
+
+@media all and (-ms-high-contrast: none) { .commonBtn01.-short a { height: 78px; } }
 
 /*--------------------
 	list
@@ -541,9 +549,9 @@ main.main { position: relative; z-index: 2; }
 
 @media screen and (max-width: 834px) { .lp .mainVisual__copy .copy { font-size: 3rem; } }
 
-.lp .mainVisual__copy .fz-70 { font-size: 7rem; line-height: 1; }
+.lp .mainVisual__copy .fz-70 { font-size: 7rem; line-height: 1; font-style: italic; display: inline-block; margin-right: 12px; }
 
-@media screen and (max-width: 834px) { .lp .mainVisual__copy .fz-70 { font-size: 3.5rem; } }
+@media screen and (max-width: 834px) { .lp .mainVisual__copy .fz-70 { font-size: 3.5rem; margin-right: 8px; } }
 
 .lp .mainVisual__logo-img { width: 57.5%; max-width: 829px; position: absolute; top: -40px; right: 0; }
 
@@ -571,7 +579,7 @@ main.main { position: relative; z-index: 2; }
 
 @media screen and (max-width: 834px) { .lp .sec__coming-soon .coming-soon__text-holder .eng { font-size: 3.8rem; } }
 
-.lp .sec__coming-soon .coming-soon__text-holder .ja { font-size: 4rem; line-height: 1; margin-top: 32px; }
+.lp .sec__coming-soon .coming-soon__text-holder .ja { font-size: 4rem; line-height: 1; margin-top: 32px; font-family: 'A-OTF UD新ゴ pro'; }
 
 @media screen and (max-width: 834px) { .lp .sec__coming-soon .coming-soon__text-holder .ja { font-size: 2.2rem; margin-top: 14px; } }
 

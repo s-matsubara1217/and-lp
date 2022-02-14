@@ -172,6 +172,9 @@
 				padding-left: 0px;
 				margin-top: 2px;
 			}
+			@include mq(ie) {
+				font-size: 2.2rem;
+			}
 
 			&::before {
 				content: '';
@@ -187,6 +190,9 @@
 				transform: translateY(-50%);
 				@include mq(sp) {
 					content: none;
+				}
+				@include mq(ie) {
+					top: 32%;
 				}
 			}
 		}
@@ -227,6 +233,9 @@
 	&.-short {
 		a {
 			height: 58px;
+			@include mq(ie) {
+				height: 78px;
+			}
 		}
 	}
 }
